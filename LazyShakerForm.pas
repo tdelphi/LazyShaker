@@ -5,7 +5,13 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
-  System.Sensors, System.Sensors.Components, FMX.Layouts, FMX.Memo, FMX.Media,
+  System.Sensors,
+  {$IFDEF VER270}
+  System.Sensors.Components,
+  {$ELSE}
+  FMX.Sensors,
+  {$ENDIF}
+  FMX.Layouts, FMX.Memo, FMX.Media,
   FMX.StdCtrls, System.Actions, FMX.ActnList, FMX.StdActns, FMX.Objects;
 
 type
